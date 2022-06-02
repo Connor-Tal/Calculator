@@ -1,0 +1,36 @@
+
+
+from operator import contains
+
+
+what = input("Income or Intrest?")
+if what.__contains__("Income"):
+    earnings = input("how much are you earning?")
+    tax = input("How much are you being taxed?")
+
+    perecent = 1/float(tax)
+    totaltax = float(earnings) * perecent
+    total = int(earnings) - totaltax
+
+    total2 = total.__round__(2)
+    totaltax2 = totaltax.__round__(2)
+
+    print("You will be taxed", totaltax2, "dollars, leaveing you with", total2, "dollars")
+
+
+else:
+    moneyin = float(input("How much money are you deposiing?"))
+    intrest = input("What is the intrest rate?")
+    years = input("How many years will the money be in the account?")
+
+    math = 1/int(intrest)
+    perecent = math * 100
+    divided = moneyin * perecent *float(years)
+
+    totalintrest = divided/100
+    total = totalintrest + moneyin
+
+    total2 = total.__round__(2)
+    totalintrest2 = totalintrest.__round__(2)
+
+    print("You will recive", totalintrest2, "total intrest, in the next", years, "years the account will have", total2, "dollars")
