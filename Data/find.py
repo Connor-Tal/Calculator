@@ -1,34 +1,53 @@
 import random
 import string
 import time
+import timeit
+
 n = 0
 b = 0
 
+
+print("This will print random numbers and or words of a certain length, and what trial number, until it finds the number or word you want.")
+print("WARNING: This program can take a long time to run, is resource intensive and will not finish if you enter a number that is too high.")
 question = input("Find a word or a number?")
+
 if question.__contains__("word"): 
+    a=[]
+    e = 0 
     word = input("What is the word you want to find?")
     letter = int(input("How many letters are in the word?"))
-
-    while b == 0:
-        n = n + 1
+    time.sleep(1)
+    n = 1000000000000000000000000000000000000000000000000000000000000000000000000
+    start = timeit.default_timer()
+    for j in range(n):
+        e = e + 1
         letters = string.ascii_lowercase
-        x = "".join(random.sample(str(letters), int(letter)))
-        print("Trial", int(n), "Word:", str(x))
-        if x == word:
-            print("You found the word", word, "in", n, "trials")
+        d = "".join(random.sample(str(letters), int(letter)))
+        print ("Trials", e, "Word:", str(d))
+        if d == word:
+            print ("You found the word", word, "in", e, "trials")
+            stop = timeit.default_timer()
+            execution_time = stop - start
+
+            print("Program Executed in "+str(execution_time))
             break
 
 if question.__contains__("number"):
-    x = 1
-    a = 0
+    a=[]
+    e = 0 
+    a =int(input("Lowest number?"))
+    b = int(input("Highest number?"))
+    d = input("What number do you want to find?")
     time.sleep(1)
-    low = int(input("What would you like the lowest number to be?"))
-    high = int(input("What would you like the highest number to be?"))
-    target = int(input("What number do you want to find?"))
-    while x == 1:
-        a = a + 1
-        number = random.randint(low,high)
-        print("Trials:", a, "Number:", number)
-        if number == target:
-            print("You found the number", target, "in", a, "trials")       
+    n = 1000000000000000000000000000000000000000000000000000000000000000000000000
+    start = timeit.default_timer()
+    for j in range(n):
+        e = e + 1
+        print ("Trials", e, "Number:", random.randint(int(a),int(b)))
+        if random.randint(int(a),int(b)) == int(d):
+            print ("You found the number", d, "in", e, "trials")
+            stop = timeit.default_timer()
+            execution_time = stop - start
+
+            print("Program Executed in "+str(execution_time))
             break
