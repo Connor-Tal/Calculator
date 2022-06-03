@@ -12,7 +12,7 @@ if question.__contains__("number"):
     print (choise)
 else:
     time.sleep(1)
-    word = input("How many letters are in the word?")
+    word = int(input("How many letters are in the word?"))
     letters = string.ascii_lowercase
-    x = "".join(random.sample(str(letters), str(word)))
-    print (x)
+    x = "".join(random.sample(str(letters), int(word)))
+    print(str(x))
