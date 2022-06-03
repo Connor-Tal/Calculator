@@ -1,5 +1,9 @@
 Hi, this is a calculator 
-Right now you can calculate intrest and income
+
+All answears are lowercase
+
+There is a genreal use calculator
+There is alsa a calculator intrest and income
 Expect more to be added soon!
 
 There is also a random number generator
