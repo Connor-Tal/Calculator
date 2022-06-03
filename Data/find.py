@@ -6,7 +6,6 @@ b = 0
 
 question = input("Find a word or a number?")
 if question.__contains__("word"): 
-
     word = input("What is the word you want to find?")
     letter = int(input("How many letters are in the word?"))
 
@@ -19,7 +18,7 @@ if question.__contains__("word"):
             print("You found the word", word, "in", n, "trials")
             break
 
-else:
+if question.__contains__("number"):
     x = 1
     a = 0
     time.sleep(1)

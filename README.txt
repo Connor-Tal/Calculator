@@ -1,4 +1,7 @@
 Hi, this is a calculator 
+
+All answears are lowercase
+
 Right now you can calculate intrest and income
 Expect more to be added soon!
 
