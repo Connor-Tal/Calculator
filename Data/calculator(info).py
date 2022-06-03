@@ -1,7 +1,6 @@
-from operator import contains
-
 print("A calculator with functions for income/intrest and bank")
-what = input("Income or Intrest?")
+what = input("income or intrest?")
+
 if what.__contains__("income"):
     earnings = input("how much are you earning?")
     tax = input("How much are you being taxed?")
@@ -14,7 +13,6 @@ if what.__contains__("income"):
     totaltax2 = totaltax.__round__(2)
 
     print("You will be taxed", totaltax2, "dollars, leaveing you with", total2, "dollars")
-
 
 if what.__contains__("intrest"):
     moneyin = float(input("How much money are you deposiing?"))
