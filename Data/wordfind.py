@@ -8,16 +8,16 @@ question = input("Find a word or a number?")
 if question.__contains__("word"): 
 
     word = input("What is the word you want to find?")
-    letter = input("How many letters are in the word?")
+    letter = int(input("How many letters are in the word?"))
 
     while b == 0:
         n = n + 1
         letters = string.ascii_lowercase
-        x == "".join(random.sample(str(letters, letter)))
-        print("Trial", str(n), "Word:", str(x))
+        x = "".join(random.sample(str(letters), int(letter)))
+        print("Trial", int(n), "Word:", str(x))
         if x == word:
-            exit("You found the word", word, "in", n, "trials")
-
+            print("You found the word", word, "in", n, "trials")
+            break
 
 else:
     x = 1
@@ -31,4 +31,5 @@ else:
         number = random.randint(low,high)
         print("Trials:", a, "Number:", number)
         if number == target:
-            exit("You found the number", target, "in", a, "trials")       
+            print("You found the number", target, "in", a, "trials")       
+            break
