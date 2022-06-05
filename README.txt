@@ -1,7 +1,5 @@
 Hi, this is a data management tool 
 
-All answears are lowercase
-
 There is a general use calculator
 There is alsa a calculator intrest and income
 Expect more to be added soon!

@@ -10,11 +10,13 @@ b = 0
 print("This will print random numbers and or words of a certain length, and what trial number, until it finds the number or word you want.")
 print("WARNING: This program can take a long time to run, is resource intensive and will not finish if you enter a number that is too high.")
 question = input("Find a word or a number?")
+question2 = question.lower()
 
-if question.__contains__("word"): 
+if question2.__contains__("word"): 
     a=[]
     e = 0 
     word = input("What is the word you want to find?")
+    word2 = word.lower()
     letter = int(input("How many letters are in the word?"))
     time.sleep(1)
     n = 1000000000000000000000000000000000000000000000000000000000000000000000000
@@ -24,7 +26,7 @@ if question.__contains__("word"):
         letters = string.ascii_lowercase
         d = "".join(random.sample(str(letters), int(letter)))
         print ("Trials", e, "Word:", str(d))
-        if d == word:
+        if d == word2:
             print ("You found the word", word, "in", e, "trials")
             stop = timeit.default_timer()
             execution_time = stop - start
@@ -32,7 +34,7 @@ if question.__contains__("word"):
             print("Program Executed in "+str(execution_time))
             break
 
-if question.__contains__("number"):
+if question2.__contains__("number"):
     a=[]
     e = 0 
     a =int(input("Lowest number?"))

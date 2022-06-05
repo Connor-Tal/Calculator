@@ -1,7 +1,8 @@
 print("A calculator with functions for income/intrest and bank")
 what = input("income or intrest?")
-
-if what.__contains__("income"):
+print("You chose", what.lower())
+what2 = what.lower()
+if what2.__contains__("income"):
     earnings = input("how much are you earning?")
     tax = input("How much are you being taxed?")
 
@@ -14,7 +15,7 @@ if what.__contains__("income"):
 
     print("You will be taxed", totaltax2, "dollars, leaveing you with", total2, "dollars")
 
-if what.__contains__("intrest"):
+if what2.__contains__("intrest"):
     moneyin = float(input("How much money are you deposiing?"))
     intrest = input("What is the intrest rate?")
     years = input("How many years will the money be in the account?")
