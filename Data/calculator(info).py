@@ -8,7 +8,7 @@ if what2.__contains__("income"):
 
     perecent = 1/float(tax)
     totaltax = float(earnings) * perecent
-    total = int(earnings) - totaltax
+    total = float(earnings) - totaltax
 
     total2 = total.__round__(2)
     totaltax2 = totaltax.__round__(2)
