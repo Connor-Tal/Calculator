@@ -1,7 +1,5 @@
 Hi, this is a data management tool 
 
-All answears are lowercase
-
 There is a general use calculator
 There is alsa a calculator intrest and income
 Expect more to be added soon!
@@ -16,5 +14,11 @@ With more to be added soon
 
 Also to test how long something takes to appear in a bunch or random numbers/strings of letters
 This records the trials and the amount of seconds it takes
-WARNING: This prosses takes a lot of memory and time
+WARNING: This prosses takes a lot of memory and time!
 (find.py)
+
+The Employee Management Tool
+Lets you add, delete, and edit employees information
+Right now there is a hardcap of 2 employees but I plan to add more
+WARNING: This is incomplete and will be updated soon but for now EXPECT BUGS!
+(employee.py)
