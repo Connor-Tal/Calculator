@@ -3,7 +3,7 @@ import time
 import string
 
 print("Will output a random number or a random string of letters, of a cetian length.")
-question = input("Random number or word?")
+question = input("Random number, word, or true/false?")
 question2 = question.lower()
 
 if question2.__contains__("number"):    
@@ -19,3 +19,11 @@ if question2.__contains__("word"):
     letters = string.ascii_lowercase
     x = "".join(random.sample(str(letters), int(word)))
     print(str(x))
+
+if question2.__contains__("true/false"):
+    time.sleep(1)
+    x = random.randint(0,1)
+    if x == 0:
+        print("False")
+    else:
+        print("True")
