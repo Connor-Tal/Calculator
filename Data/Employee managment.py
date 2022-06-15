@@ -25,7 +25,7 @@ if choise_lower.__contains__("view"):
 if choise_lower.__contains__("remove"):
     delete = True
 
-while add == True and  employee1 == False:
+while add == True and employee1 == False:
     print("Create a user")
     person1 = {}
     username = input("Enter account name ")
