@@ -22,3 +22,8 @@ Lets you add, delete, and edit employees information
 Right now there is a hardcap of 2 employees but I plan to add more
 WARNING: This is incomplete and will be updated soon but for now EXPECT BUGS!
 (employee.py)
+
+The Conversion Tool
+This tool will allow you to convert most common units to system of meserment
+Mainly for Metric and US Standard units
+(convert.py)
