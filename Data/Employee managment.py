@@ -1,189 +1,182 @@
+true = True
 add = False
-view = False
 delete = False
-
+view = False
+add2 = False
 employee1 = False
 employee2 = False
+choise11 = False
 
-class employee():
-    def __init__(self, name, age, email, phone, address, position, salary):
-        self.name = name
-        self.age = age
+class Employee():
+    def __init__(self, full_name, email, position, salary):
+        self.full_name = full_name
         self.email = email
-        self.phone = phone
-        self.address = address
         self.position = position
         self.salary = salary
-
-print("Welcome to the employee management program")
-choise = input("Would you like to add, remove, or view employees?")
-choise_lower = choise.lower()
-if choise_lower.__contains__("add"):
-    add = True
-if choise_lower.__contains__("view"):
-    view = True
-if choise_lower.__contains__("remove"):
-    delete = True
-
-while add == True and employee1 == False:
-    print("Create a user")
-    person1 = {}
-    username = input("Enter account name ")
-    person1 = (username)
-    print("Enter information for", username)
-    name = input("Enter name ")
-    age = input("Enter age ")
-    email = input("Enter email ")
-    phone = input("Enter phone number ")
-    address = input("Enter address ")
-    position = input("Enter position ")
-    salary = input("Enter salary ")
-    print("User created")
-    person1 = employee(name, age, email, phone, address, position, salary)
-    employee1 = True
-    add = False
-    addmore = input("Create a second user?")
-    addmore_lower = addmore.lower()
-    if addmore_lower.__contains__("yes"):
-        print("Create a user")
-        person2 = {}
-        username2 = input("Enter account name ")
-        person2 = (username2)
-        print("Enter information for", username2)
-        name1 = input("Enter name ")
-        age1 = input("Enter age ")
-        email1 = input("Enter email ")
-        phone1 = input("Enter phone number ")
-        address1 = input("Enter address ")
-        position1 = input("Enter position ")
-        salary1 = input("Enter salary ")
-        print("User created")
-        person2 = employee(name1, age1, email1, phone1, address1, position1, salary1)
-        employee2 = True
-        choice3 = input("View or remove employees?")
-        choice3_lower = choice3.lower()
-        if choice3_lower.__contains__("view"):
+    
+while true == True:
+    if choise11 == False:
+        print("Welcome to the Employee Management System")
+        choice1 = input("Would you like to add, view, or delete employees?")
+        choice1_lower = choice1.lower()
+        choise11 = True
+    if choise11 == True:
+        if choice1_lower == "add":
+            add = True
+        if choice1_lower == "view":
             view = True
-        if choice3_lower.__contains__("remove"):
+        if choice1_lower == "delete":
             delete = True
-       
-    if addmore_lower.__contains__("no"):
-        add = False
-        choice3 = input("View or remove employees?")
-        choice3_lower = choice3.lower()
-        if choice3_lower.__contains__("view"):
-            view = True
-        if choice3_lower.__contains__("remove"):
-            delete = True
+
+        if add == True:
+            print("Please enter this information to create an employee")
+            Account1name = input("Enter account name ")
+            Account1password = input("Enter account password ")
+            full_name = input("Enter employee name ")
+            email = input("Enter employee email ")
+            position = input("Enter employee position ")
+            salary = input("Enter employee salary ")
+            person1 = Account1name, full_name, email, position, salary
+            print(person1)
+            print("Employee added")
+            employee1 = True
+            add = False
+            choise2 = input("Would you like to cointinue adding employees, view, or delete employees?")
+            choise2_lower = choise2.lower()
+            if choise2_lower == "add":
+                add2 = True
+            if choise2_lower == "view":
+                view = True
+            if choise2_lower == "delete":
+                delete = True
+        if add2 == True:
+            print("Please enter this information to create an employee")
+            Account2name = input("Enter account name ")
+            Account2password = input("Enter account password ")
+            full_name1 = input("Enter employee name ")
+            email1 = input("Enter employee email ")
+            position1 = input("Enter employee position ")
+            salary1 = input("Enter employee salary ")
+            person2 = Account2name, full_name, email, position, salary
+            print(person2)
+            print("Employee added")
+            employee2 = True
+            add2 = False
+            choise2 = input("Would you like to add, view, or delete employees?")
+            choise2_lower = choise2.lower()
+            if choise2_lower == "view":
+                view = True
+            if choise2_lower == "delete":
+                delete = True
+            if choise2_lower == "add":
+                if employee1 == True and employee2 == False:
+                    add2 = True
+                if employee1 == False and employee2 == True:
+                    add1 = True
+                if employee1 == True and employee2 == True:
+                    choise2 = input ("You have no more avalible employees to add. Would you like to view, or delete employees?")
+                    choise2_lower = choise2.lower()
+                    if choise2_lower == "view":
+                        view = True
+                    if choise2_lower == "delete":
+                        delete = True
+                if employee1 == False and employee2 == False:
+                    add1 = True
         
-while add == True and employee2 == False and employee1 == True:
-    print("Create a user")
-    person2 = {}
-    username2 = input("Enter account name ")
-    person2 = (username2)
-    print("Enter information for", username2)
-    name1 = input("Enter name ")
-    age1 = input("Enter age ")
-    email1 = input("Enter email ")
-    phone1 = input("Enter phone number ")
-    address1 = input("Enter address ")
-    position1 = input("Enter position ")
-    salary1 = input("Enter salary ")
-    print("User created")
-    person2 = employee(name, age, email, phone, address, position, salary)
-    employee2 = True
-    add = False
-    choice3 = input("View or remove employees?")
-    choice3_lower = choice3.lower()
-    if choice3_lower.__contains__("view"):
-        view = True
-    if choice3_lower.__contains__("remove"):
-        delete = True
+        if view == True:
+            user = input("Enter username of the account you would like to view ")
+            if user == Account1name:
+                passw = input("Enter password ")
+                if passw == Account1password:
+                    print(person1)
+                    view = False
+                    choise2 = input("Would you like to view another employee, add, or delete employees?")
+                    choise2_lower = choise2.lower()
+                    if choise2_lower == "view":
+                        view = True
+                    if choise2_lower == "delete":
+                        delete = True
+                    if choise2_lower == "add" and employee1 == False:
+                        add1 = True
+                    if choise2_lower == "add" and employee1 == True:
+                        add2 = True   
+                else:
+                    true = False
+                    exit("Incorrect password")
+    
+            if user == Account2name:
+                passw = input("Enter password ")
+                if passw == Account2password:
+                    print(person2)
+                    view = False
+                    view = Fachoise2 = input("Would you like to view another employee, add, or delete employees?")
+                    choise2_lower = choise2.lower()
+                    if choise2_lower == "view":
+                        view = True
+                    if choise2_lower == "delete":
+                        delete = True
+                    if choise2_lower == "add" and employee1 == False:
+                        add = True
+                    if choise2_lower == "add" and employee1 == True:
+                        add2 = True
 
-while add == True and employee2 == True and employee1 == True:
-    exit("You have reached the maximum number of users")
+                else:
+                    true = False
+                    exit("Incorrect password")
+            else:
+                true = False
+                print("User not found")
 
-else:
-    choice3 = input("View or remove employees?")
-    choice3_lower = choice3.lower()
-    if choice3_lower.__contains__("view"):
-        view = True
-    if choice3_lower.__contains__("remove"):
-        delete = True
+        if delete == True:
+            user = input("Enter username of the account you would like to delete ")
+            if user == Account1name:
+                passw = input("Enter password ")
+                if passw == Account1password:
+                    del person1
+                    print("Employee deleted")
+                    delete = False
+                    employee1 = False
+                    choise2 = input("Would you like to continue deleting employees, view, or add employees?")
+                    choise2_lower = choise2.lower()
+                    if choise2_lower == "delete":
+                        delete = True
+                    if choise2_lower == "view":
+                        view = True
+                    if choise2_lower == "add" and employee1 == False:
+                        add1 = True
+                    if choise2_lower == "add" and employee1 == True:
+                        add2 = True
+                else:
+                    true = False
+                    exit("Incorrect password")
 
-while view == True:
-    inputuser = input("Enter account name ")
-    if inputuser == username:
-        print(person1.name)
-        print(person1.age)
-        print(person1.email)
-        print(person1.phone)
-        print(person1.address)
-        print(person1.position)
-        print(person1.salary)
-        view = False
-        choise10 = input("Would you like to view another user?")
-        choise10_lower = choise10.lower()
-        if choise10_lower.__contains__("yes"):
-            view = True
-        if choise10_lower.__contains__("no"):
-            view = False
-            choise5 = input("Would you like to add, or delete employees?")
-            choise5_lower = choise5.lower()
-            if choise5_lower.__contains__("add"):
-                add = True
-            if choise5_lower.__contains__("delete"):
-                delete = True
-                
-    if inputuser == username2:
-        print(person2.name)
-        print(person2.age)
-        print(person2.email)
-        print(person2.phone)
-        print(person2.address)
-        print(person2.position)
-        print(person2.salary)
-        view = False
-        choise10 = input("Would you like to view another user?")
-        choise10_lower = choise10.lower()
-        if choise10_lower.__contains__("yes"):
-            view = True
-        if choise10_lower.__contains__("no"):
-            view = False
-            choise5 = input("Would you like to add, or delete employees?")
-            choise5_lower = choise5.lower()
-            if choise5_lower.__contains__("add"):
-                add = True
-            if choise5_lower.__contains__("delete"):
-                delete = True
-    else:
-        print("User not found")
-        view = False
-        choise5 = input("add or delete employees, or try again?")
-        choise5_lower = choise5.lower()
-        if choise5_lower.__contains__("add"):
-            add = True
-        if choise5_lower.__contains__("delete"):
-            delete = True
-        if choise5_lower.__contains__("try"):
-            view = True
+            if user == Account2name:
+                passw = input("Enter password ")
+                if passw == Account2password:
+                    del person2
+                    print("Employee deleted")
+                    delete = False
+                    employee2 = False
+                    choise2 = input("Would you like to continue deleting employees, view, or add employees?")
+                    choise2_lower = choise2.lower()
+                    if choise2_lower == "delete":
+                        delete = True
+                    if choise2_lower == "view":
+                        view = True
+                    if choise2_lower == "add" and employee1 == False:
+                        add = True
+                    if choise2_lower == "add" and employee1 == True:
+                        add2 = True
+                else: 
+                    true = False
+                    exit("Incorrect password")
+            else:
+                true = False
+                print("User not found")     
 
-while delete == True:
-    inputuser = input("Enter account name ")
-    if inputuser == username:
-        print("User deleted")
-        employee1 = False
-    if inputuser == username2:
-        print("User deleted")
-        employee2 = False
-    else:
-        print("User not found")
-        delete = False
-        choise5 = input("add or view employees, or try again?")
-        choise5_lower = choise5.lower()
-        if choise5_lower.__contains__("add"):
-            add = True
-        if choise5_lower.__contains__("view"):
-            view = True
-        if choise5_lower.__contains__("try"):
-            delete = True
+    if choise2_lower == "exit":
+        true = False
+        exit("Thank you for using the program")
+    if choice1_lower == "exit":
+        true = False
+        exit("Thank you for using the program")
