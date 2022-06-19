@@ -6,14 +6,11 @@ add2 = False
 employee1 = False
 employee2 = False
 choise11 = False
+Account1name = "NaN"
+Account1password = "NaN"
+Account2name = "NaN"
+Account2password = "NaN"
 
-class Employee():
-    def __init__(self, full_name, email, position, salary):
-        self.full_name = full_name
-        self.email = email
-        self.position = position
-        self.salary = salary
-    
 while true == True:
     if choise11 == False:
         print("Welcome to the Employee Management System")
@@ -72,7 +69,7 @@ while true == True:
                 if employee1 == True and employee2 == False:
                     add2 = True
                 if employee1 == False and employee2 == True:
-                    add1 = True
+                    add = True
                 if employee1 == True and employee2 == True:
                     choise2 = input ("You have no more avalible employees to add. Would you like to view, or delete employees?")
                     choise2_lower = choise2.lower()
@@ -81,7 +78,7 @@ while true == True:
                     if choise2_lower == "delete":
                         delete = True
                 if employee1 == False and employee2 == False:
-                    add1 = True
+                    add = True
         
         if view == True:
             user = input("Enter username of the account you would like to view ")
@@ -94,17 +91,17 @@ while true == True:
                     choise2_lower = choise2.lower()
                     if choise2_lower == "view":
                         view = True
-                    if choise2_lower == "delete":
+                    elif choise2_lower == "delete":
                         delete = True
-                    if choise2_lower == "add" and employee1 == False:
-                        add1 = True
-                    if choise2_lower == "add" and employee1 == True:
+                    elif choise2_lower == "add" and employee1 == False:
+                        add = True
+                    elif choise2_lower == "add" and employee1 == True:
                         add2 = True   
                 else:
                     true = False
                     exit("Incorrect password")
     
-            if user == Account2name:
+            elif user == Account2name:
                 passw = input("Enter password ")
                 if passw == Account2password:
                     print(person2)
@@ -113,11 +110,11 @@ while true == True:
                     choise2_lower = choise2.lower()
                     if choise2_lower == "view":
                         view = True
-                    if choise2_lower == "delete":
+                    elif choise2_lower == "delete":
                         delete = True
-                    if choise2_lower == "add" and employee1 == False:
+                    elif choise2_lower == "add" and employee1 == False:
                         add = True
-                    if choise2_lower == "add" and employee1 == True:
+                    elif choise2_lower == "add" and employee1 == True:
                         add2 = True
 
                 else:
@@ -140,17 +137,17 @@ while true == True:
                     choise2_lower = choise2.lower()
                     if choise2_lower == "delete":
                         delete = True
-                    if choise2_lower == "view":
+                    elif choise2_lower == "view":
                         view = True
-                    if choise2_lower == "add" and employee1 == False:
-                        add1 = True
-                    if choise2_lower == "add" and employee1 == True:
+                    elif choise2_lower == "add" and employee1 == False:
+                        add = True
+                    elif choise2_lower == "add" and employee1 == True:
                         add2 = True
                 else:
                     true = False
                     exit("Incorrect password")
 
-            if user == Account2name:
+            elif user == Account2name:
                 passw = input("Enter password ")
                 if passw == Account2password:
                     del person2
@@ -161,11 +158,11 @@ while true == True:
                     choise2_lower = choise2.lower()
                     if choise2_lower == "delete":
                         delete = True
-                    if choise2_lower == "view":
+                    elif choise2_lower == "view":
                         view = True
-                    if choise2_lower == "add" and employee1 == False:
+                    elif choise2_lower == "add" and employee1 == False:
                         add = True
-                    if choise2_lower == "add" and employee1 == True:
+                    elif choise2_lower == "add" and employee1 == True:
                         add2 = True
                 else: 
                     true = False

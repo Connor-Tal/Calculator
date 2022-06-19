@@ -27,3 +27,9 @@ The Conversion Tool
 This tool will allow you to convert most common units to system of meserment
 Mainly for Metric and US Standard units
 (convert.py)
+
+The Sorting tool
+This tool will allow you to sort a list of numbers or strings
+You can sort in ascending or descending order
+Seperarate the list by commas
+(sort.py)
